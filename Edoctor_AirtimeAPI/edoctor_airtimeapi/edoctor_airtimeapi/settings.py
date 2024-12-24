@@ -135,7 +135,10 @@ elif ENVIRONMENT == 'production':
             'HOST': "ep-odd-sea-a2qy3z4v-pooler.eu-central-1.aws.neon.tech",
             'PASSWORD': "iuRWFLe51QJb",
             'NAME': "neondb",
-            'PORT': '5432'
+            'PORT': '5432',
+            'OPTIONS': {
+                'sslmode': 'require'  # Required for Neon
+            }
         }
     }
 else:

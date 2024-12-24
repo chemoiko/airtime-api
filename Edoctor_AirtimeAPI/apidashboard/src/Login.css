@@ -1,0 +1,24 @@
+.login-div {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.login-view {
+    border-radius: 10px;
+    border: 2px solid blue;
+    width: 300px;
+    margin-top: 20vh;
+    color: blue;
+    font-family:'Courier New';/*, Courier, monospace';*/
+    letter-spacing: 2px;
+}
+
+.login-input-field {
+    border: 2px solid black;
+    font-family:'Courier New';/* Courier, monospace';*/
+    letter-spacing: 2px;
+    
+    color: white;
+    border-radius: 10px;
+}

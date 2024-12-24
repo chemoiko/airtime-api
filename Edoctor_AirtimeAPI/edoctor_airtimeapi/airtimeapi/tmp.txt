@@ -1,0 +1,24 @@
+if (log_type=="mmAirtime_Transaction"):
+    return self.mmAirtimeTransactionLog()
+elif (log_type=="msisdn"):
+    return self.msisdnLog()
+elif (log_type=="airtime_purchase"):
+    return self.airtimePurchaseLog()
+elif (log_type=="mmdeposit"):
+    return self.mmDepositLog()
+elif (log_type=="mmwithdraw"):
+    return self.mmWithdrawLog()
+elif (log_type=="bank_deposit"):
+    return self.bankDepositLog()
+elif (log_type=="internal_transfer"):
+    return self.internalTransferLog()
+elif (log_type=="bank_withdraw"):
+    return self.bankWithdrawLog()
+elif (log_type=="transaction_status"):
+    return self.transactionStatusLog()
+elif (log_type=="bank_withdraw_status"):
+    return self.bankWithdrawStatusLog()
+elif (log_type=="balance"):
+    return self.balanceLog()
+elif (log_type=="ministatement"):
+    return self.ministatementLog()

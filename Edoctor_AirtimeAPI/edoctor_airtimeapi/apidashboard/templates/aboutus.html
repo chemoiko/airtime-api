@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="About Edoctorug">
+    <meta name="author" content="Edoctorug">
+    <!-- Favicon icon -->
+    {% load static %}
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/logos/edoctorug.jpeg' %}">
+    <title>About Us</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'css/lib/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{% static 'css/helper.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
+    <!--[if lt IE 9]>
+    <script src="https:**oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="fix-header fix-sidebar">
+    <!-- Preloader - style you can find in spinners.css -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
+    </div>
+    <!-- Main wrapper  -->
+    <div id="main-wrapper">
+        <div class="unix-login">
+            <div class="container-fluid">
+                <div class="col-md-20 align-self-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="/">
+                                <h8 class="text-primary">Home</h8>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="/dashboard/public/contactus">
+                                <h8 class="text-primary">Contact Us</h8>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="/dashboard/public/services">
+                                <h8 class="text-primary">Services</h8>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="/dashboard/public/privacy">
+                                <h8 class="text-primary">Privacy</h8>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="/dashboard/public/TC">
+                                <h8 class="text-primary">Terms And Conditions</h8>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="/dashboard/public/faq">
+                                <h8 class="text-primary">FAQ</h8>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="/dashboard/public/aboutus">
+                                <h8 class="text-primary">About Us</h8>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="{% static 'assets/Edoctorug_Payments_API_Doc.pdf' %}">
+                                <h8 class="text-primary">API Documentation</h8>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-12 text-center mb-4">
+                        <a href="/"><img src="{% static 'images/logos/edoctorug.jpeg' %}" height="120px" width="120px" alt="Edoctorug Logo"></a>
+                    </div>
+                    <div class="col-lg-8">
+                        <h4 class="text-center mb-4"><b>About Edoctorug</b></h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Welcome to Edoctorug, where we believe in bringing healthcare closer to you. Our mission is to revolutionize healthcare access by providing telemedicine services and essential medical products at your fingertips.</p>
+
+                                <p>At Edoctorug, we understand the challenges of accessing quality healthcare, especially in remote areas or during emergencies. That's why we've built a platform that connects patients with medical specialists and facilitates seamless delivery of healthcare services and products, all from the comfort of your home.</p>
+
+                                <p>Our comprehensive suite of services includes:</p>
+                                <ul>
+                                    <li>Online doctor consultations: Speak to experienced medical professionals without leaving your home.</li>
+                                    <li>Online medicine orders: Easily order medicines and have them delivered to your doorstep.</li>
+                                    <li>Online ambulance bookings: Arrange for emergency medical transportation with just a few clicks.</li>
+                                    <li>Online lab test orders: Schedule and receive lab test results conveniently.</li>
+                                    <li>Chronic diseases monitoring: Monitor and manage chronic conditions with regular support from our healthcare experts.</li>
+                                    <li>Online diseases testing: Get tested for various illnesses without visiting a clinic.</li>
+                                    <li>Medical loan applications: Access financial assistance tailored for medical expenses.</li>
+                                    <li>Medical care savings: Save and budget for future healthcare needs with our savings plan.</li>
+                                    <li>Airtime and mobile money APIs: Seamlessly integrate airtime top-up and mobile money services into your applications.</li>
+                                </ul>
+
+                                <p>Whether you're seeking medical advice, ordering medicines, or monitoring your health, Edoctorug is here to ensure that you receive prompt, reliable, and compassionate care.</p>
+
+                                <p>Join us in our mission to make healthcare accessible to all, regardless of location or circumstance. Together, we can build a healthier, happier world.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Wrapper -->
+    <!-- All Jquery -->
+    <script src="{% static 'js/lib/jquery/jquery.min.js' %}"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="{% static 'js/lib/bootstrap/js/popper.min.js' %}"></script>
+    <script src="{% static 'js/lib/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="{% static 'js/jquery.slimscroll.js' %}"></script>
+    <!--Menu sidebar -->
+    <script src="{% static 'js/sidebarmenu.js' %}"></script>
+    <!--stickey kit -->
+    <script src="{% static 'js/lib/sticky-kit-master/dist/sticky-kit.min.js' %}"></script>
+    <!--Custom JavaScript -->
+    <script src="{% static 'js/custom.min.js' %}"></script>
+
+</body

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {% load static %}
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href={% static "images/logos/edoctorug.jpeg" %}>
+    <title>Company Dashboard</title>
+    <!-- Bootstrap Core CSS -->
+    <link href={% static "css/lib/bootstrap/bootstrap.min.css" %} rel="stylesheet">
+    <!-- Custom CSS -->
+
+    <link href={% static "css/lib/calendar2/semantic.ui.min.css" %} rel="stylesheet">
+    <link href={% static "css/lib/calendar2/pignose.calendar.min.css" %} rel="stylesheet">
+    <link href={% static "css/lib/owl.carousel.min.css" %} rel="stylesheet" />
+    <link href={% static "css/lib/owl.theme.default.min.css" %} rel="stylesheet" />
+    <link href={% static "css/helper.css" %} rel="stylesheet">
+    <link href={% static "css/style.css" %} rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
+    <!--[if lt IE 9]>
+    <script src={% static "https:**oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" %}></script>
+    <script src={% static "https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" %}></script>
+<![endif]-->
+</head>
+
+<body class="fix-header fix-sidebar">
+    <!--div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+			<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+    </div-->
+    <!-- Main wrapper  -->
+    <div id="main-wrapper">
+    
+        <!-- header header  -->
+        <div class="header">
+            <!--start of navigation bar-->
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <!-- Logo -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/dashboard">
+                        <!-- Logo icon -->
+                        <b><img src={% static "images/logos/edoctorug.jpeg" %} height="120px" width="120px" alt="homepage" class="dark-logo" /></b>
+                        <!--End Logo icon -->
+                        <!-- Logo text -->
+                        <span><img src={% static "images/logo-text.png" %} alt="homepage" class="dark-logo" /></span>
+                    </a>
+                </div>
+                <!-- End Logo -->
+                <!--start of navbar collapse div-->
+                <div class="navbar-collapse">
+                    <!-- toggle and nav items -->
+                    <ul class="navbar-nav mr-auto mt-md-0">
+                        <!-- This is  -->
+                        <li class="nav-item"> 
+                            <a class="nav-link nav-toggler hidden-md-up text-muted  " href="javascript:void(0)">
+                                <i class="mdi mdi-menu"></i>
+                            </a> 
+                        </li>
+                        <li class="nav-item m-l-10"> 
+                            <a class="nav-link sidebartoggler hidden-sm-down text-muted  " href="javascript:void(0)">
+                                <i class="ti-menu"></i>
+                            </a>
+                        </li>
+                        
+                        <!-- Start of Profile control -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted  " href={% static "#" %} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src={% static "images/logos/user.svg" %} alt="user" class="profile-pic" /></a>
+                            <div class="dropdown-menu dropdown-menu-right animated zoomIn">
+                                <ul class="dropdown-user">
+                                    <li><a href="#"><i class="ti-user"></i> Profile</a></li>
+                                    <li><a href="#"><i class="ti-wallet"></i> Balance</a></li>
+                                    <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                                    <li><a href="#"><i class="ti-settings"></i> Setting</a></li>
+                                    <li><a href="/dashboard/auth/logout"><i class="fa fa-power-off"></i> Logout</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!--end of profile controls-->
+                    </ul>
+                </div>
+            </nav>
+            <!--end of top navigation-->
+        </div>
+        <!--end of div for header-->
+        <!-- Left Sidebar  -->
+
+        <!--- Sidebar menu starts Here-->
+        <div class="left-sidebar">
+        <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <!--nav sidebar items-->
+                    <ul id="sidebarnav">
+                        <li class="nav-devider"></li>
+                        <li class="nav-label">Home</li>
+                        <li> 
+                            <a class="has-arrow  " href={% static "#" %} aria-expanded="false">
+                                <i class="fa fa-tachometer"></i>
+                                <span class="hide-menu">Log Data
+                                </span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse">
+                                <li><a href="mmairtime_transaction_log.html">MM Airtime Transaction</a></li>
+                                <li><a href="msisdn_log.html">MSISDN Info</a></li>
+                                <li><a href="airtime_purchase.html">Airtime Purchase</a></li>
+                                <li><a href="mmfunds_deposit_log.html">MM Funds Deposit</a></li>
+                                <li><a href="mmwithdraw_log.html">MM Withdraw</a></li>
+                                <li><a href="bank_deposit_log.html">Bank Deposit</a></li>
+                                <li><a href="internal_transfer_log.html">Internal Funds Transfer</a></li>
+                                <li><a href="bank_withdraw_log.html">Bank Withdraw</a></li>
+                                <li><a href="transaction_status_log.html">Transaction Status</a></li>
+                                <li><a href="bank_withdraw_status_log.html">Bank Withdraw Status</a></li>
+                                <li><a href="balance_log.html">Balance</a></li>
+                                <li><a href="ministatement_log.html">Mini Statement</a></li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                    <!--end of sidebar navigation-->
+                </nav>
+            </div>
+                <!--side bar navigationbar ends here-->
+        </div>
+        <!--- Sidebar menu ends here-->
+        <!-- Page wrapper  -->
+        <div class="page-wrapper">
+            <!-- Page Content header -->
+            <div class="row page-titles">
+                <div class="col-md-5 align-self-center">
+                    <h3 class="text-primary">Dashboard</h3> 
+                </div>
+                <div class="col-md-7 align-self-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="javascript:void(0)">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- End Of Page Content Header -->
+
+            <!-- Container fluid  -->
+            <div class="container-fluid">
+                <!--row data starts-->
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card p-30">
+                            <div class="media">
+                                <div class="media-left meida media-middle">
+                                    <span><i class="fa fa-archive f-s-40 color-warning"></i></span>
+                                </div>
+                                <div class="media-body media-text-right">
+                                    <h2 id="today_api_usage">0<h2>
+                                    <p class="m-b-0">Visited Today</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card p-30">
+                            <div class="media">
+                                <div class="media-left meida media-middle">
+                                    <span><i class="fa fa-archive f-s-40 color-warning"></i></span>
+                                </div>
+                                <div class="media-body media-text-right">
+                                    <h2 id="monthly_api_usage">0</h2>
+                                    <p class="m-b-0">Monthly Visits</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--row data-->
+                <!--Tab holder starts-->
+                <div class="col-md-6">
+                    <!--card starts-->
+                    <div class="card" style="width:75vw;">
+                        <!--card body starts here-->
+                        <div class="card-body p-b-0">
+                            <h5 class="card-title"><b>API CONTROL</b></h5>
+                            <!--Tab header starts here-->
+                            <ul class="nav nav-tabs customtab2" role="tablist">
+                                        <li class="nav-item"> 
+                                            <a class="nav-link active" data-target="#home7" data-toggle="tab" href="#home7" role="tab">
+                                                <span class="hidden-sm-up"><i class="ti-home"></i></span> 
+                                                <span class="hidden-xs-down">NEW API KEYS</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-target="#profile7" data-toggle="tab" href="#profile7" role="tab">
+                                                <span class="hidden-sm-up">
+                                                    <i class="ti-user"></i>
+                                                </span>
+                                                <span class="hidden-xs-down">API KEYS</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#make_admin" role="tab">
+                                                <span class="hidden-sm-up"><i class="ti-email"></i></span>
+                                                <span class="hidden-xs-down">VERIFY COMPANY</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#all_companies" role="tab">
+                                                <span class="hidden-sm-up"><i class="ti-email"></i></span>
+                                                <span class="hidden-xs-down">REGISTERED COMPANIES</span>
+                                            </a>
+                                        </li>
+                            </ul>
+                            <!--Tab header ends here-->
+                            <!--Tab Content-->
+                            <div class="tab-content">
+                                <!--Tab pane 1-->
+                                <div class="tab-pane active" id="home7" role="tabpanel" aria-labelledby="home-tab">
+                                    <div class="p-20">
+                                        <!--api key div-->
+                                        <div class="col-lg-6" >
+                                            <div class="card card-outline-primary"  style="width:50rem;">
+                                                <div class="card-header">
+                                                    <h6 class="m-b-0 text-white">GENERATE API KEYS</h6>
+                                                </div>
+                                                <!--api keys card body-->
+                                                <div class="card-body">
+                                                    <form id="gen_apikey_form" action="#">{% csrf_token %}
+                                                        <div class="form-body">
+                                                            <!--api details holder-->
+                                                           <div class="row p-t-20">
+                                                                <!--api username-->
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <input type="text" id="api_username" class="form-control" placeholder="Generated API Username" readonly>
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                                <!--api username-->
+                                                                <!--api password starts-->
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <input type="text" id="api_password" class="form-control" placeholder="Generated API Password" readonly>
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                                <!--api password ends-->
+
+                                                                <!--generate api token-->
+                                                                <div class="col-md-6">
+                                                                    <div class="form-actions">
+                                                                        <button name="test_key" type="submit" class="btn btn-success"> <i class="fa fa-check"></i> TEST KEY</button>
+                                                                        <button name="pdt_key" type="submit" class="btn btn-inverse">
+                                                                        <i class="fa fa-check"></i> PRODUCTION KEY</button>
+                                                                    </div>
+                                                                </div>
+                                                                <!--ends generate api token-->
+
+                                                               
+                                                           </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <!--end api keys card body-->
+                                            </div>
+                                            <!--end api keys card-->
+                                            
+                                            
+                                        </div>
+                                        <!--api key div ends-->
+                                    </div>
+                                </div>
+                                <!--Tab pane 1 ends-->
+                                <!--Tab pane 2 starts-->
+                                <div class="tab-pane  p-20" id="profile7" role="tabpanel">
+                                    <!--start api keys list-->
+                                            <div class="card card-outline-primary" style="width:70vw;">
+                                                <div class="card-header">
+                                                    <h6 class="m-b-0 text-white">API KEYS LIST</h6>
+                                                </div>
+                                                <div class="card-body">
+                                                    
+                                                        <table id="server_table" class="data-table table stripe hover nowrap" cellspacing="0" width="100%">
+                                                            
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+                                    <!--end api keys list-->
+                                </div>
+                                <!--Tab pane 2 ends-->
+
+                                <!--Tab pane 3 starts-->
+                                <div class="tab-pane p-20" id="make_admin" role="tabpanel">
+                                    <!--start admins add-->
+                                    <div class="col-lg-6">
+                                            <div class="card card-outline-primary">
+                                                <div class="card-header">
+                                                    <h6 class="m-b-0 text-white">VERIFY COMPANY</h6>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="form-validation">
+                                                        <form id = "verify_company_form" class="form-validation" action="#" method="post">
+                               {% csrf_token %}                             <div class="form-group row">
+                                                                <label class="col-lg-4 col-form-label" for="val-name">
+                                                                    Company Name <span class="text-danger">*</span>
+                                                                </label>
+                                                                <div class="col-lg-6">
+                                                                    <input type="text" class="form-control" id="val-name" name="val-name" placeholder="Enter a company name..">
+                                                                </div>
+                                                            </div>
+
+                                                            <!--end--username-->
+                                                            <!--start email-->
+                                                            <div class="form-group row">
+                                                                <label class="col-lg-4 col-form-label" for="val-email">Company Email <span class="text-danger">*</span></label>
+                                                                <div class="col-lg-6">
+                                                                    <input type="text" class="form-control" id="val-email" name="val-email" placeholder="Your valid company email..">
+                                                                </div>
+                                                            </div>
+                                                            <!--end email-->
+
+                                                            <!--start password-->
+                                                            <div class="form-group row">
+                                                                    <label class="col-lg-4 col-form-label" for="val-location">
+                                                                        Company Location<span class="text-danger">*</span>
+                                                                    </label>
+                                                                    <div class="col-lg-6">
+                                                                        <input type="text" class="form-control" id="val-location" name="val-location" placeholder="Enter Company Location..">
+                                                                    </div>
+                                                            </div>
+                                                            <!--end password-->
+
+                                                            <!--start tel phone number-->
+                                                            <div class="form-group row">
+                                                                    <label class="col-lg-4 col-form-label" for="val-telno">
+                                                                        Company Phone (UG) 
+                                                                        <span class="text-danger">*</span>
+                                                                    </label>
+                                                                    <div class="col-lg-6">
+                                                                        <input type="text" class="form-control" id="val-telno" name="val-telno" placeholder="070-999-0000">
+                                                                    </div>
+                                                            </div>
+                                                            <!--end tel phone number-->
+
+                                                             <!--start company upload 1-->
+                                                            <div class="form-group row">
+                                                                    <label class="col-lg-4 col-form-label" for="val-document1">
+                                                                        Upload Company Document: 
+                                                                        <span class="text-danger">*</span>
+                                                                    </label>
+                                                                    <div class="col-lg-6">
+                                                                        <input type="file" class="form-control" id="val-document1" name="val-document1">
+                                                                    </div>
+                                                            </div>
+                                                            <!--end company upload 1-->
+
+                                                             <!--start company upload 2-->
+                                                            <div class="form-group row">
+                                                                    <label class="col-lg-4 col-form-label" for="val-document2">
+                                                                        Upload Company Document: 
+                                                                        <span class="text-danger">*</span>
+                                                                    </label>
+                                                                    <div class="col-lg-6">
+                                                                        <input type="file" class="form-control" id="val-document2" name="val-document2">
+                                                                    </div>
+                                                            </div>
+                                                            <!--end company upload 2-->
+
+                                                             <!--start company upload 3-->
+                                                            <div class="form-group row">
+                                                                    <label class="col-lg-4 col-form-label" for="val-document3">
+                                                                        Upload Company Document: 
+                                                                        <span class="text-danger">*</span>
+                                                                    </label>
+                                                                    <div class="col-lg-6">
+                                                                        <input type="file" class="form-control" id="val-document3" name="val-document3">
+                                                                    </div>
+                                                            </div>
+                                                            <!--end company upload 3-->
+
+                                                             <!--start company upload 4-->
+                                                            <div class="form-group row">
+                                                                    <label class="col-lg-4 col-form-label" for="val-document4">
+                                                                        Upload Company Document: 
+                                                                        <span class="text-danger">*</span>
+                                                                    </label>
+                                                                    <div class="col-lg-6">
+                                                                        <input type="file" class="form-control" id="val-document4" name="val-document4">
+                                                                    </div>
+                                                            </div>
+                                                            <!--end company upload 4-->
+
+                                                             <!--start company upload 5-->
+                                                            <div class="form-group row">
+                                                                    <label class="col-lg-4 col-form-label" for="val-document5">
+                                                                        Upload Company Document: 
+                                                                        <span class="text-danger">*</span>
+                                                                    </label>
+                                                                    <div class="col-lg-6">
+                                                                        <input type="file" class="form-control" id="val-document5" name="val-document5">
+                                                                    </div>
+                                                            </div>
+                                                            <!--end company upload 5-->
+
+                                                            <!--submission-->
+                                                            <div class="form-group row">
+                                                                <div class="col-lg-8 ml-auto">
+                                                                    <button type="submit" class="btn btn-primary">REQUEST VERIFICATION</button>
+                                                                </div>
+                                                            </div>
+                                                            <!--submission ends-->
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    <!--end admin add-->
+                                    </div>
+                                </div>
+                                <!--Tab pane 3 ends-->
+
+                                <!--Tab pane 4 starts-->
+                                <div class="tab-pane  p-20" id="all_companies" role="tabpanel">
+                                    <!--start api keys list-->
+                                            <div class="card card-outline-primary" style="width:70vw;">
+                                                <div class="card-header">
+                                                    <h6 class="m-b-0 text-white">COMPANIES REGISTERED BY YOU</h6>
+                                                </div>
+                                                <div class="card-body">
+                                                    
+                                                        <table id="companies_server_table" class="data-table table stripe hover nowrap" cellspacing="0" width="100%">
+                                                            
+                                                        </table>
+                                                    
+                                                </div>
+                                            </div>
+                                    <!--end api keys list-->
+                                </div>
+                                <!--Tab pane 4 ends-->
+
+                            </div>
+                            <!--Tab Content Ends-->
+                        </div>
+                        <!--card body ends here-->
+                    </div>
+                    <!--card ends here-->
+                </div>
+                <!--Tab holder ends-->
+            </div>
+            <!--end of fluid container-->
+            
+        </div>
+        <!-- End Wrapper -->
+    <!-- All Jquery -->
+    <script src={% static "js/lib/jquery/jquery.min.js" %}></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src={% static "js/lib/bootstrap/js/popper.min.js" %}></script>
+    <script src={% static "js/lib/bootstrap/js/bootstrap.min.js" %}></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src={% static "js/jquery.slimscroll.js" %}></script>
+    <!--Menu sidebar -->
+    <script src={% static "js/sidebarmenu.js" %}></script>
+    <!--stickey kit -->
+    <script src={% static "js/lib/sticky-kit-master/dist/sticky-kit.min.js" %}></script>
+    <!--Custom JavaScript -->
+
+
+    <!-- Amchart -->
+     <script src={% static "js/lib/morris-chart/raphael-min.js" %}></script>
+    <script src={% static "js/lib/morris-chart/morris.js" %}></script>
+    <script src={% static "js/lib/morris-chart/dashboard1-init.js" %}></script>
+
+
+	<script src={% static "js/lib/calendar-2/moment.latest.min.js" %}></script>
+    <!-- scripit init-->
+    <script src={% static "js/lib/calendar-2/semantic.ui.min.js" %}></script>
+    <!-- scripit init-->
+    <script src={% static "js/lib/calendar-2/prism.min.js" %}></script>
+    <!-- scripit init-->
+    <script src={% static "js/lib/calendar-2/pignose.calendar.min.js" %}></script>
+    <!-- scripit init-->
+    <script src={% static "js/lib/calendar-2/pignose.init.js" %}></script>
+
+    <script src={% static "js/lib/owl-carousel/owl.carousel.min.js" %}></script>
+    <script src={% static "js/lib/owl-carousel/owl.carousel-init.js" %}></script>
+    <script src={% static "js/scripts.js" %}></script>
+    <!-- scripit init-->
+
+    <script src={% static "js/custom.min.js" %}></script>
+
+    <script src={% static "js/lib/datatables/datatables.min.js" %}></script>
+    <script src={% static "js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js" %}></script>
+    <script src={% static "js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js" %}></script>
+    <script src={% static "js/lib/datatables/cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js" %}></script>
+    <script src={% static "js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js" %}></script>
+    <script src={% static "js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js" %}></script>
+    <script src={% static "js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js" %}></script>
+    <script src={% static "js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js" %}></script>
+    <script src={% static "js/lib/datatables/datatables-init.js" %}></script>
+    <script src={% static "js/lib/form-validation/jquery.validate.min.js" %}></script>
+    <script src={% static "js/lib/form-validation/jquery.validate-init.js" %}></script>
+    <script>
+    
+        $("document").ready(function(){
+            let endpoint = ""; //"http://127.0.0.1:8000";
+
+            let log_type = "apikeys";
+            
+        //alert("loaded)");
+            $("#verify_company_form").on("submit",function(e){
+                e.preventDefault();
+                //alert("submitting");
+                const documents = [];
+                var fileInput = document.getElementById('val-document');
+                
+                for (let i = 1; i<6; i++)
+                {
+                    const fileInput = document.getElementById(`val-document${i}`);
+                    if (fileInput.files.length > 0) 
+                    {
+                        documents.push(fileInput.files[0]);
+                    }
+                }
+                //alert(documents.length);
+                
+        var formData = new FormData();
+        formData.append('name', $('#val-name').val());
+        formData.append('email', $('#val-email').val());
+        formData.append('telno', $('#val-telno').val());
+
+        for (let i = 0; i < documents.length; i++)
+        {
+            formData.append(`document-${i}`, documents[i]);
+        }
+        //formData.append('document', $('#val-document1')[0].files[0]); // Add the file
+        //alert($('#val-document1').files);
+        
+        $.ajax({
+            url: '/dashboard/requestDocVerification',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: formData,
+            success: function(response){
+                // Handle success
+                //console.log(response);
+                alert("Verification Request Submitted");
+            },
+            error: function(xhr, status, error){
+                // Handle error
+                console.log(xhr.responseText);
+            }
+        });
+
+        });
+            
+
+        $("#gen_apikey_form").on("submit",function(e){
+                e.preventDefault();
+                //alert("submitting");
+                let btn_name = e.originalEvent.submitter.name;
+                
+                
+                    $("#api_username").val("Your Production Token: ");
+                    //$("#gen_apikey_form").submit();
+                    $.ajax(
+                        {
+                            type: "POST",
+                            url: endpoint+"/dashboard/apikey/generate_apikey",
+                            data:{"type":btn_name},
+                            dataType: "json",
+                            encode: true
+                        }
+                    ).done(function (data)
+                    {
+                        if(data.status_code==200)
+                        {
+                            
+                            $("#api_username").val(data.data.api_username);
+                            $("#api_password").val(data.data.api_password);
+                        }
+                        
+                    }).fail(function (data)
+                    {
+                        alert("Server Error");
+                    });
+
+                
+
+
+               // alert(btn_name);
+            });
+
+            $('#server_table').dataTable({
+                
+                       columns: [
+                                    { title: 'API Username' },
+                                    { title: 'API Key' },
+                                    { title: 'Key Type' },
+                                    { title: 'Validated' },
+                                    { title: 'Date' },
+                                    { title: 'Time' }
+                             ],
+                processing: true,
+                serverSide: true,
+                ajax:endpoint+"/dashboard/logs?type="+log_type,
+                buttons: [
+                   'copy','csv', 'excel', 'pdf', 'print'
+                ],
+
+            });
+
+            $('#companies_server_table').dataTable({
+                
+                       columns: [
+                                    { title: 'Company Name' },
+                                    { title: 'Company Email' },
+                                    { title: 'Company Tel.no' },
+                                    { title: 'Verification Status' },
+                                    { title: 'Registered Date' },
+                                    { title: 'Verified Date' }
+                             ],
+                processing: true,
+                serverSide: true,
+                ajax:endpoint+"/dashboard/logs?type=all_companies",
+                buttons: [
+                   'copy','csv', 'excel', 'pdf', 'print'
+                ],
+
+            });
+        
+        });
+
+    </script>
+    
+</body>
+</html>

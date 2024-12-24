@@ -1,0 +1,211 @@
+{
+    "info": {
+        "_postman_id": "61db3d42-f096-4f6a-b1c8-3c8878e5e70e",
+        "name": "airtime_api",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "BankDeposit",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api/bankdeposit",
+                    "path": [
+                        "airtime",
+                        "api",
+                        "bankdeposit"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Token afd0d814cbdd7bbb22602cbc284775b32e66103e"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"amount\":5000,\n  \"note\":\"deposit cash\",\n  \"usage\":[\n                {\n                  \"provider\":\"mtn\",\n                  \"amount\":1000\n                },\n                {\n                  \"provider\":\"airtel\",\n                  \"amount\":4000\n                }\n  ]\n}"
+                }
+            }
+        },
+        {
+            "name": "127.0.0.1:8000/airtime/api/register",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api/auth/register",
+                    "path": [
+                        "airtime",
+                        "api",
+                        "auth",
+                        "register"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"username\":\"mrdax\",\n  \"password\":\"mrdax\"\n}"
+                }
+            }
+        },
+        {
+            "name": "127.0.0.1:8000/auth/api",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api",
+                    "path": [
+                        "airtime",
+                        "api"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Token afd0d814cbdd7bbb22602cbc284775b32e66103e"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "mini_statement",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api/mini_statement",
+                    "path": [
+                        "airtime",
+                        "api",
+                        "mini_statement"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Token afd0d814cbdd7bbb22602cbc284775b32e66103e"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \n}"
+                }
+            }
+        },
+        {
+            "name": "Internal Funds Transfer",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api/internal_funds_transfer",
+                    "path": [
+                        "airtime",
+                        "api",
+                        "internal_funds_transfer"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Token afd0d814cbdd7bbb22602cbc284775b32e66103e"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"amount\":5000,\n  \"description\":\"transfer money\",\n  \"receiver_account_no\":\"1008909390\",\n  \"receiver_email\":\"test@algomail.com\",\n  \"mmprovider\":\"mtn\"\n}"
+                }
+            }
+        },
+        {
+            "name": "bankDeposit",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api/bankdeposit",
+                    "path": [
+                        "airtime",
+                        "api",
+                        "bankdeposit"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Token afd0d814cbdd7bbb22602cbc284775b32e66103e"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"amount\":5000,\n  \"note\":\"deposit cash\",\n  \"usage\":[\n                {\n                  \"provider\":\"mtn\",\n                  \"amount\":1000\n                },\n                {\n                  \"provider\":\"airtel\",\n                  \"amount\":4000\n                }\n  ]\n}"
+                }
+            }
+        }
+    ]
+}

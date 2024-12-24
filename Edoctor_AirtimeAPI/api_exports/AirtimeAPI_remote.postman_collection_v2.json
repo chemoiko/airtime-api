@@ -1,0 +1,636 @@
+{
+	"info": {
+		"_postman_id": "87cfc647-f62c-4053-b853-38edde148633",
+		"name": "AirtimeAPI_remote",
+		"description": "Communicate with the Airtime API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32924611"
+	},
+	"item": [
+		{
+			"name": "get balance",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Stores the balance from the response in an environment or global variable",
+							"var balance = pm.response.json().Balance;",
+							"pm.globals.set(\"balance\", balance);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "40939223421154824",
+						"description": "API endpoint username"
+					},
+					{
+						"key": "password",
+						"value": "89c6e638235e4dc09d314f776be56fc7",
+						"description": "API endpoint password"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edoct-android-app-intern.vercel.app/airtime/api/balance",
+					"protocol": "https",
+					"host": [
+						"edoct-android-app-intern",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"airtime",
+						"api",
+						"balance"
+					]
+				},
+				"description": "# Airtime Balance API\n\nThis API endpoint is used to retrieve the airtime balance.\n\n## Request\n\n- Method: GET\n- Endpoint: `https://edoct-android-app-intern.vercel.app/airtime/api/balance`\n    \n\n## Response\n\nThe response for this request can be documented as a JSON schema:\n\n``` json\n{\n    \"Status\": \"STATUS\",\n    \"StatusCode\": \"STATUS_CODE\",\n    \"Balance\": {\n        \"Currency\": [\n            {\n                \"Code\": \"CURRENCY_CODE\",\n                \"Balance\": \"REMAINING BALANCE PER CURRENCY CODE\"\n            }\n        ]\n    }\n}\n\n ```"
+			},
+			"response": [
+				{
+					"name": "get balance",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "username",
+								"value": "40939223421154824",
+								"description": "API endpoint username"
+							},
+							{
+								"key": "password",
+								"value": "89c6e638235e4dc09d314f776be56fc7",
+								"description": "API endpoint password"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://edoct-android-app-intern.vercel.app/airtime/api/balance",
+							"protocol": "https",
+							"host": [
+								"edoct-android-app-intern",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"airtime",
+								"api",
+								"balance"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Age",
+							"value": "0"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "public, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Length",
+							"value": "151"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 28 May 2024 02:32:13 GMT"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Server",
+							"value": "Vercel"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=63072000; includeSubDomains; preload"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Vercel-Cache",
+							"value": "MISS"
+						},
+						{
+							"key": "X-Vercel-Id",
+							"value": "cpt1::iad1::ffg47-1716863526606-be4dbbce5216"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Status\": \"OK\",\n    \"StatusCode\": \"0\",\n    \"Balance\": {\n        \"Currency\": [\n            {\n                \"Code\": \"UGX-MTNMM\",\n                \"Balance\": \"1572135.00\"\n            },\n            {\n                \"Code\": \"UGX-WARIDMM\",\n                \"Balance\": \"56057168498.00\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "transaction status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "40939223421154824"
+					},
+					{
+						"key": "password",
+						"value": "89c6e638235e4dc09d314f776be56fc7"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transaction_id\":\"3636638817772e42b59d74cff571fbb3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edoct-android-app-intern.vercel.app/airtime/api/transaction_status",
+					"protocol": "https",
+					"host": [
+						"edoct-android-app-intern",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"airtime",
+						"api",
+						"transaction_status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "withdraw status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "40939223421154824"
+					},
+					{
+						"key": "password",
+						"value": "89c6e638235e4dc09d314f776be56fc7"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transaction_id\":\"3636638817772e42b59d74cff571fbb3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edoct-android-app-intern.vercel.app/airtime/api/withdraw_status",
+					"protocol": "https",
+					"host": [
+						"edoct-android-app-intern",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"airtime",
+						"api",
+						"withdraw_status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "internal transfer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "3114126127156984408"
+					},
+					{
+						"key": "password",
+						"value": "3ba7a36a182e468b962ccec3b0260ae6"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amount\":5000,\n  \"mmprovider\":\"mtn\",\n  \"receiver_account_no\":\"1002345678\",\n  \"receiver_email\":\"test@test.com\",\n  \"description\":\"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edoct-android-app-intern.vercel.app/airtime/api/internal_funds_transfer",
+					"protocol": "https",
+					"host": [
+						"edoct-android-app-intern",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"airtime",
+						"api",
+						"internal_funds_transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "withdraw to bank",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "3114126127156984408"
+					},
+					{
+						"key": "password",
+						"value": "3ba7a36a182e468b962ccec3b0260ae6"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amount\":50000,\n  \"mmprovider\":\"mtn\",\n  \"account_no\":\"1002345678\",\n  \"account_name\":\"test account\",\n  \"account_id\":\"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edoct-android-app-intern.vercel.app/airtime/api/withdraw_to_bank",
+					"protocol": "https",
+					"host": [
+						"edoct-android-app-intern",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"airtime",
+						"api",
+						"withdraw_to_bank"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bank deposit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "3114126127156984408"
+					},
+					{
+						"key": "password",
+						"value": "3ba7a36a182e468b962ccec3b0260ae6"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amount\":5000,\n  \"note\":\"deposit cash\",\n  \"usage\":[\n                {\n                  \"provider\":\"mtn\",\n                  \"amount\":1000\n                },\n                {\n                  \"provider\":\"airtel\",\n                  \"amount\":4000\n                }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edoct-android-app-intern.vercel.app/airtime/api/bankdeposit",
+					"protocol": "https",
+					"host": [
+						"edoct-android-app-intern",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"airtime",
+						"api",
+						"bankdeposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "withdraw",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "3114126127156984408"
+					},
+					{
+						"key": "password",
+						"value": "3ba7a36a182e468b962ccec3b0260ae6"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amount\":5000,\n  \"telno\":\"256702000000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edoct-android-app-intern.vercel.app/airtime/api/withdraw",
+					"protocol": "https",
+					"host": [
+						"edoct-android-app-intern",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"airtime",
+						"api",
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MM deposit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "3114126127156984408"
+					},
+					{
+						"key": "password",
+						"value": "3ba7a36a182e468b962ccec3b0260ae6"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amount\":5000,\n  \"telno\":\"256702895119\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edoct-android-app-intern.vercel.app/airtime/api/deposit",
+					"protocol": "https",
+					"host": [
+						"edoct-android-app-intern",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"airtime",
+						"api",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "msisdn info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "3114126127156984408"
+					},
+					{
+						"key": "password",
+						"value": "3ba7a36a182e468b962ccec3b0260ae6"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"telno\":\"0776982212\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edoct-android-app-intern.vercel.app/airtime/api/telno_info",
+					"protocol": "https",
+					"host": [
+						"edoct-android-app-intern",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"airtime",
+						"api",
+						"telno_info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send_airtime",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "3114126127156984408"
+					},
+					{
+						"key": "password",
+						"value": "3ba7a36a182e468b962ccec3b0260ae6"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amount\":50,\n  \"telno\":\"256772800008\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edoct-android-app-intern.vercel.app/airtime/api/send_airtime",
+					"protocol": "https",
+					"host": [
+						"edoct-android-app-intern",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"airtime",
+						"api",
+						"send_airtime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buy airtime",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "3114126127156984408"
+					},
+					{
+						"key": "password",
+						"value": "3ba7a36a182e468b962ccec3b0260ae6"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amount\":8000,\n  \"provider\":\"airtel\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edoct-android-app-intern.vercel.app/airtime/api/buy_airtime",
+					"protocol": "https",
+					"host": [
+						"edoct-android-app-intern",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"airtime",
+						"api",
+						"buy_airtime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mini_statement_local",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "3114126127156984408"
+					},
+					{
+						"key": "password",
+						"value": "3ba7a36a182e468b962ccec3b0260ae6"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edoct-android-app-intern.vercel.app/airtime/api/mini_statement",
+					"protocol": "https",
+					"host": [
+						"edoct-android-app-intern",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"airtime",
+						"api",
+						"mini_statement"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

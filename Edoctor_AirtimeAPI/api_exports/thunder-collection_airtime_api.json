@@ -1,0 +1,146 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "airtime_api",
+    "collectionId": "4863f211-c7d7-4f37-8ee8-432f20ef9c6c",
+    "dateExported": "2024-05-07T01:53:40.581Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "136217a1-938b-4fa3-8d2d-b0ebc4a0c20b",
+            "colId": "4863f211-c7d7-4f37-8ee8-432f20ef9c6c",
+            "containerId": "",
+            "name": "BankDeposit",
+            "url": "127.0.0.1:8000/airtime/api/bankdeposit",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-27T06:30:36.461Z",
+            "modified": "2024-03-27T06:30:36.461Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token afd0d814cbdd7bbb22602cbc284775b32e66103e"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"amount\":5000,\n  \"note\":\"deposit cash\",\n  \"usage\":[\n                {\n                  \"provider\":\"mtn\",\n                  \"amount\":1000\n                },\n                {\n                  \"provider\":\"airtel\",\n                  \"amount\":4000\n                }\n  ]\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9ac5e031-34e8-48af-b756-83d51d5ec455",
+            "colId": "4863f211-c7d7-4f37-8ee8-432f20ef9c6c",
+            "containerId": "",
+            "name": "127.0.0.1:8000/airtime/api/register",
+            "url": "127.0.0.1:8000/airtime/api/auth/register",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-27T06:31:09.107Z",
+            "modified": "2024-03-27T06:31:09.107Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"mrdax\",\n  \"password\":\"mrdax\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c23a8806-ed83-4cc3-849a-e45769ad2c06",
+            "colId": "4863f211-c7d7-4f37-8ee8-432f20ef9c6c",
+            "containerId": "",
+            "name": "127.0.0.1:8000/auth/api",
+            "url": "127.0.0.1:8000/airtime/api",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-27T06:31:21.700Z",
+            "modified": "2024-03-27T06:31:21.700Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token afd0d814cbdd7bbb22602cbc284775b32e66103e"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "18b02313-2bfd-44a2-ac52-aa0c3e2293eb",
+            "colId": "4863f211-c7d7-4f37-8ee8-432f20ef9c6c",
+            "containerId": "",
+            "name": "mini_statement",
+            "url": "127.0.0.1:8000/airtime/api/mini_statement",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-27T06:31:36.933Z",
+            "modified": "2024-03-27T06:31:36.933Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token afd0d814cbdd7bbb22602cbc284775b32e66103e"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8cf43361-dd04-46e1-8851-e74d2d7428d5",
+            "colId": "4863f211-c7d7-4f37-8ee8-432f20ef9c6c",
+            "containerId": "",
+            "name": "Internal Funds Transfer",
+            "url": "127.0.0.1:8000/airtime/api/internal_funds_transfer",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-03-27T06:31:45.912Z",
+            "modified": "2024-03-27T06:31:45.913Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token afd0d814cbdd7bbb22602cbc284775b32e66103e"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"amount\":5000,\n  \"description\":\"transfer money\",\n  \"receiver_account_no\":\"1008909390\",\n  \"receiver_email\":\"test@algomail.com\",\n  \"mmprovider\":\"mtn\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ce2634ab-2924-415f-8982-b6d7989fdfd5",
+            "colId": "4863f211-c7d7-4f37-8ee8-432f20ef9c6c",
+            "containerId": "",
+            "name": "bankDeposit",
+            "url": "127.0.0.1:8000/airtime/api/bankdeposit",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-03-27T06:31:54.665Z",
+            "modified": "2024-03-27T06:31:54.665Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token afd0d814cbdd7bbb22602cbc284775b32e66103e"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"amount\":5000,\n  \"note\":\"deposit cash\",\n  \"usage\":[\n                {\n                  \"provider\":\"mtn\",\n                  \"amount\":1000\n                },\n                {\n                  \"provider\":\"airtel\",\n                  \"amount\":4000\n                }\n  ]\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ],
+    "ref": "X82z_tSqOeyDzn9IPI14RWCF8LcSE1QJ968UmnyZve6pN1Th84Le5O38TfYv05zNkyr9ZatZjbAFX8i5gP_4lQ"
+}

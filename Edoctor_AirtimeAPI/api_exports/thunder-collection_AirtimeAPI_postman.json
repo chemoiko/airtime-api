@@ -1,0 +1,433 @@
+{
+    "info": {
+        "_postman_id": "7dcd77de-170f-4dcb-a756-92a299b819a4",
+        "name": "AirtimeAPI",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "get balance",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api/balance",
+                    "path": [
+                        "airtime",
+                        "api",
+                        "balance"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Token e22589a643eec0d546a62c38e2e20a63bde19146"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"amount\":5000,\n  \"note\":\"deposit cash\",\n  \"usage\":[\n                {\n                  \"provider\":\"mtn\",\n                  \"amount\":1000\n                },\n                {\n                  \"provider\":\"airtel\",\n                  \"amount\":4000\n                }\n  ]\n}"
+                }
+            }
+        },
+        {
+            "name": "transaction status",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api/transaction_status",
+                    "path": [
+                        "airtime",
+                        "api",
+                        "transaction_status"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Token e22589a643eec0d546a62c38e2e20a63bde19146"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "withdraw status",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api/withdraw_status",
+                    "path": [
+                        "airtime",
+                        "api",
+                        "withdraw_status"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Token e22589a643eec0d546a62c38e2e20a63bde19146"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"transaction_id\":\"HMzC7rpATV7t6cYCt0DVKJDFOf6ccUs3MbEBkGwSAtJfV5aI1fCiaPxovsZeQLSMf07aecc854b0da9bb0d9f875492d6b37\"\n}"
+                }
+            }
+        },
+        {
+            "name": "internal transfer",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api/internal_funds_transfer",
+                    "path": [
+                        "airtime",
+                        "api",
+                        "internal_funds_transfer"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Token e22589a643eec0d546a62c38e2e20a63bde19146"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"amount\":5000,\n  \"mmprovider\":\"mtn\",\n  \"receiver_account_no\":\"1002345678\",\n  \"receiver_email\":\"test@test.com\",\n  \"description\":\"123456789\"\n}"
+                }
+            }
+        },
+        {
+            "name": "withdraw to bank",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api/withdraw_to_bank",
+                    "path": [
+                        "airtime",
+                        "api",
+                        "withdraw_to_bank"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Token e22589a643eec0d546a62c38e2e20a63bde19146"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"amount\":50000,\n  \"mmprovider\":\"mtn\",\n  \"account_no\":\"1002345678\",\n  \"account_name\":\"test account\",\n  \"account_id\":\"123456789\"\n}"
+                }
+            }
+        },
+        {
+            "name": "bank deposit",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api/bankdeposit",
+                    "path": [
+                        "airtime",
+                        "api",
+                        "bankdeposit"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Token e22589a643eec0d546a62c38e2e20a63bde19146"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"amount\":5000,\n  \"note\":\"deposit cash\",\n  \"usage\":[\n                {\n                  \"provider\":\"mtn\",\n                  \"amount\":1000\n                },\n                {\n                  \"provider\":\"airtel\",\n                  \"amount\":4000\n                }\n  ]\n}"
+                }
+            }
+        },
+        {
+            "name": "withdraw",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api/withdraw",
+                    "path": [
+                        "airtime",
+                        "api",
+                        "withdraw"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Token e22589a643eec0d546a62c38e2e20a63bde19146"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"amount\":5000,\n  \"telno\":\"256702000000\"\n}"
+                }
+            }
+        },
+        {
+            "name": "MM deposit",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api/deposit",
+                    "path": [
+                        "airtime",
+                        "api",
+                        "deposit"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Token e22589a643eec0d546a62c38e2e20a63bde19146"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"amount\":5000,\n  \"telno\":\"256702895119\"\n}"
+                }
+            }
+        },
+        {
+            "name": "msisdn info",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api/telno_info",
+                    "path": [
+                        "airtime",
+                        "api",
+                        "telno_info"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Token e22589a643eec0d546a62c38e2e20a63bde19146"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"telno\":\"256772900888\"\n}"
+                }
+            }
+        },
+        {
+            "name": "send_airtime",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api/send_airtime",
+                    "path": [
+                        "airtime",
+                        "api",
+                        "send_airtime"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Token e22589a643eec0d546a62c38e2e20a63bde19146"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"amount\":5,\n  \"telno\":\"256772000000\"\n}"
+                }
+            }
+        },
+        {
+            "name": "buy airtime",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api/buy_airtime",
+                    "path": [
+                        "airtime",
+                        "api",
+                        "buy_airtime"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Token e22589a643eec0d546a62c38e2e20a63bde19146"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"amount\":5000,\n  \"provider\":\"mtn\"\n}"
+                }
+            }
+        },
+        {
+            "name": "mini_statement_local",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "127.0.0.1:8000/airtime/api/mini_statement",
+                    "path": [
+                        "airtime",
+                        "api",
+                        "mini_statement"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000"
+                },
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Token 9cc20446894d2a7837397de87f4ce67a1b21a55a"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"amount\":5000,\n  \"note\":\"deposit cash\",\n  \"usage\":[\n                {\n                  \"provider\":\"mtn\",\n                  \"amount\":1000\n                },\n                {\n                  \"provider\":\"airtel\",\n                  \"amount\":4000\n                }\n  ]\n}"
+                }
+            }
+        }
+    ]
+}

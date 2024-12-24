@@ -131,10 +131,10 @@ elif ENVIRONMENT == 'production':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'USER': 'default',
-            'HOST': "ep-silent-moon-a4pyl2gv-pooler.us-east-1.aws.neon.tech",
-            'PASSWORD': "tZvP2W5wAJsU",
-            'NAME': "verceldb",
+            'USER': 'neondb_owner',
+            'HOST': "ep-odd-sea-a2qy3z4v-pooler.eu-central-1.aws.neon.tech",
+            'PASSWORD': "iuRWFLe51QJb",
+            'NAME': "neondb",
             'PORT': '5432'
         }
     }

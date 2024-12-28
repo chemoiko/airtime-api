@@ -120,48 +120,36 @@ DATABASE_ROUTERS = [
 
 ENVIRONMENT = os.environ.get('ENVIRONMENT', 'development')
 
-if ENVIRONMENT == 'development':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-elif ENVIRONMENT == 'production':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'USER': 'neondb_owner',
-            'HOST': "ep-odd-sea-a2qy3z4v-pooler.eu-central-1.aws.neon.tech",
-            'PASSWORD': "iuRWFLe51QJb",
-            'NAME': "neondb",
-            'PORT': '5432',
-            'OPTIONS': {
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'USER': 'neondb_owner',
+        'HOST': "ep-odd-sea-a2qy3z4v-pooler.eu-central-1.aws.neon.tech",
+        'PASSWORD': "iuRWFLe51QJb",
+        'NAME': "neondb",
+        'PORT': '5432',
+        'OPTIONS': {
                 'sslmode': 'require'  # Required for Neon
-            }
         }
     }
-else:
-    raise ValueError(
-        "Invalid ENVIRONMENT variable. Must be 'development' or 'production'.")
+}
+# Password validation
+# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
-    # Password validation
-    # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
-
-    AUTH_PASSWORD_VALIDATORS = [
-        {
-            'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-        },
-        {
-            'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-        },
-        {
-            'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-        },
-        {
-            'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-        },
-    ]
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
+]
 
 
 # Internationalization

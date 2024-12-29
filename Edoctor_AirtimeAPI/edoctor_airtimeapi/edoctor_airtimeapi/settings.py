@@ -39,7 +39,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.mailersend.net'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-# os.environ.get('EMAIL_ID')
 EMAIL_HOST_USER = 'MS_AW59iW@trial-k68zxl21p834j905.mlsender.net'
 EMAIL_HOST_PASSWORD = 'CubCT9bpJnUpDCVb'  # os.environ.get('EMAIL_PW')
 
@@ -60,7 +59,7 @@ INSTALLED_APPS = [
     'airtimeapi',
     'apidashboard',
     "verify_email.apps.VerifyEmailConfig",
-    'corsheaders'
+    'corsheaders',
 
 ]
 
@@ -82,7 +81,7 @@ ROOT_URLCONF = 'edoctor_airtimeapi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # 'DIRS': [BASE_DIR / "templates"],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -97,21 +96,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'edoctor_airtimeapi.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    },
-
-#    'dashboard_users': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db_db.sqlite3',
-#    }
-# }
 
 DATABASE_ROUTERS = [
     "router.DashboardRouter"
@@ -193,8 +177,20 @@ AUTHENTICATION_BACKENDS = [
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
+# where all static files
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-print(f"static root directory: {STATICFILES_DIRS}\n")
 MEDIA_URLS = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 print(f"media root directory: {MEDIA_ROOT}\n")
+
+
+VERIFY_EMAIL = {
+    'VERIFICATION_SUCCESS_TEMPLATE': None,
+    'VERIFICATION_FAILED_TEMPLATE': None,
+    'NEW_EMAIL_SENT_TEMPLATE': None,
+    'REQUEST_NEW_EMAIL_TEMPLATE': None,
+    'HTML_MESSAGE_TEMPLATE': None,
+    'USE_DEFAULT_TEMPLATES': True,
+    'SUPPRESS_EMAIL_TEMPLATE_ERRORS': True,  # Add this line
+    'DEFAULT_TEMPLATE_DIR': None  # Add this line
+}

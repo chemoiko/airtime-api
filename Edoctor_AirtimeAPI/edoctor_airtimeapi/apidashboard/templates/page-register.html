@@ -161,7 +161,9 @@
 
                             if(data.status_code==200)
                             {
-                                alert("Registration Successful, continue to login");
+                                console.log("Registration Successful, continue to login");
+
+                                // redirect to /dashboard
                                 window.location.href = "/dashboard";
                             }
                             else if(data.status_code==404)

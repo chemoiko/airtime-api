@@ -119,8 +119,12 @@ def register(request):
     print("2nd names are: ", last_name)
     # User.objects.get(username=user_name, password=password)
     print("\n\tlogin data: ", user)
-    email_exists = (len(User.objects.filter(email=email)) == 0)
-    username_exists = (len(User.objects.filter(username=user_name)) == 0)
+
+    email_exists = User.objects.filter(email=email).exists()
+    username_exists = User.objects.filter(username=user_name).exists()
+
+    # email_exists = (len(User.objects.filter(email=email)).exists)
+    # username_exists = (len(User.objects.filter(username=user_name).exists))
     print(f"username {user_name} status: {username_exists}")
     print(f"email {email} status: {email_exists}")
 
@@ -133,7 +137,7 @@ def register(request):
 
     if user.is_anonymous is True:
         try:
-            if ((email_exists == False) or (username_exists == False)):
+            if ((email_exists) or (username_exists)):
                 response_dic = {'status_code': 404, 'data': valid_object,
                                 'message': 'user error, email already exists'}
                 return Response(response_dic)
@@ -168,7 +172,9 @@ def register(request):
                 dashboard_user = DashboardUsers(
                     user=user_x, user_role=dashboard_role, internal_token=apicredentials)
                 dashboard_user.save()
-                EdocVerify().send_email_verification(request, dashboard_user)
+                # EdocVerify().send_email_verification(request, dashboard_user)
+
+                login(request, user_x)
                 name_dic = {'status_code': 200, 'name': user_x.get_username()}
                 return Response(name_dic)
             else:
@@ -488,7 +494,8 @@ def getLogs(request):
     log_type = request.GET.get('type')
     item_index = request.GET.get('start')
     item_no = request.GET.get('length')
-    print(f"data table is: {log_type} {item_index} and total: {item_no} with draw id: {draw_id}")
+    print(f"data table is: {log_type} {item_index} and total: {
+          item_no} with draw id: {draw_id}")
 
     # log_columns,
     log_data = Logs().getLog(request_user, log_type, get_body)

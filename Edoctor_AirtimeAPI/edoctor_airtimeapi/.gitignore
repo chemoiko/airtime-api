@@ -17,59 +17,26 @@ local_settings.py
 ### Django.Python Stack ###
 # Byte-compiled / optimized / DLL files
 *.py[cod]
-*$py.class
+EdoctorUg_FrontEnd/*.iml
+EdoctorUg_FrontEnd/.gradle
+EdoctorUg_FrontEnd/local.properties
+EdoctorUg_FrontEnd/.idea/caches
+EdoctorUg_FrontEnd/.idea/libraries
+EdoctorUg_FrontEnd/.idea/modules.xml
+EdoctorUg_FrontEnd/.idea/workspace.xml
+EdoctorUg_FrontEnd/.idea/navEditor.xml
+EdoctorUg_FrontEnd/.idea/assetWizardSettings.xml
+EdoctorUg_FrontEnd.DS_Store
+EdoctorUg_FrontEnd/app/build
+EdoctorUg_FrontEnd/captures
+EdoctorUg_FrontEnd/.externalNativeBuild
+EdoctorUg_FrontEnd/.cxx
+EdoctorUg_FrontEnd/local.properties
+EdoctorUg_FrontEnd/.igit
+EdoctorUg_FrontEnd/.xgit
 
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-# lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
-
-# Translations
-*.mo
-
+EdoctorUg_BackEnd/__pycache__
+EdoctorUg_BackEnd/db.sqlite3
 # Django stuff:
 
 # Flask stuff:

@@ -494,8 +494,7 @@ def getLogs(request):
     log_type = request.GET.get('type')
     item_index = request.GET.get('start')
     item_no = request.GET.get('length')
-    print(f"data table is: {log_type} {item_index} and total: {
-          item_no} with draw id: {draw_id}")
+    print(f"data table is: {log_type} {item_index} and total: {item_no} with draw id: {draw_id}")
 
     # log_columns,
     log_data = Logs().getLog(request_user, log_type, get_body)
